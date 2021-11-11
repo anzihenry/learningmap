@@ -1,0 +1,5 @@
+# Python
+
+## variables
+
+## data types

@@ -1,0 +1,6 @@
+# Go
+
+## variables
+
+
+## data types
