@@ -1,5 +1,6 @@
 # Javascript
 
+## 'use strict';
 ## variables
 - let
 - var
@@ -19,6 +20,8 @@
     - `` (可以使用变量名作占位, 类似其他语言的formatted string)
 - Boolean
 - Object
+    - properties
+    - ordered
 - Symbol
 - 特殊值
     - null
@@ -81,3 +84,6 @@
 - do...while
 
 ## function
+- 函数表达式，需要在最后有个;
+- arrow function
+
