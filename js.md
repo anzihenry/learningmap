@@ -21,7 +21,15 @@
 - Boolean
 - Object
     - properties
-    - ordered
+        - 增加property，直接声明就算添加了
+        - 删除property，使用形如：delete object.property
+        - 访问property，
+            - .访问（要求property是一个有效的名字）
+            - []访问（property名称在这里是string类型）
+        - computed property， 跟[]有莫大关系，能动态生成property名称
+        - property名称可以使用保留字，没任何限制，但类型只能是string或者symbol，假如不是这两种类型就类型转换成string
+        - property顺序，key是纯数字，怎会按照数字顺序，不然就按照声明顺序
+
 - Symbol
 - 特殊值
     - null
@@ -79,7 +87,7 @@
 - switch-case （使用的是 === ）
 
 ### 循环执行
-- for
+- for，for...in
 - while
 - do...while
 
