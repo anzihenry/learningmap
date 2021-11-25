@@ -11,7 +11,7 @@
 ## data types
 ### types
 - Number
-(Integer取值范围：-(2^53-1) ~ 2^53-1)
+    - Integer取值范围：-(2^53-1) ~ 2^53-1
     - BigInt(数字后面加个n)
     - Infinity, -Infinity, NaN
 - String
@@ -29,8 +29,31 @@
         - computed property， 跟[]有莫大关系，能动态生成property名称
         - property名称可以使用保留字，没任何限制，但类型只能是string或者symbol，假如不是这两种类型就类型转换成string
         - property顺序，key是纯数字，怎会按照数字顺序，不然就按照声明顺序
+    
+    - methods
+        - this指针
+            - arrow function用的上下文的this指针，它本身没有this指针
+        - 定义方式
+            - methodName: function(){}
+            - methodName() {}
+        
+    
+    - object copy
+        - 浅拷贝 bject.assign()
+        - 深拷贝
+
+    - 垃圾回收机制
+        - 引用计数算法，无法处理循环引用的情况。
+        - 标记-清除算法，2012年之后所有浏览器都用了这个算法
+            - 分代回收
+            - 增量标记
+            - 惰性清理
+        - 记住这个：因为“有零引用的对象”总是不可获得的，但是相反却不一定，参考“循环引用”
 
 - Symbol
+
+- Collection
+
 - 特殊值
     - null
     - undefined
