@@ -29,6 +29,7 @@
         - computed property， 跟[]有莫大关系，能动态生成property名称
         - property名称可以使用保留字，没任何限制，但类型只能是string或者symbol，假如不是这两种类型就类型转换成string
         - property顺序，key是纯数字，怎会按照数字顺序，不然就按照声明顺序
+        - Optional chaining '?.'
     
     - methods
         - this指针
@@ -36,6 +37,9 @@
         - 定义方式
             - methodName: function(){}
             - methodName() {}
+        - 构造函数、new操作符
+            - 构造函数一般是首字母大写命名
+            - 构造函数只能通过new运算符使用 eg: new User(name)
         
     
     - object copy
