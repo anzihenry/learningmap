@@ -30,6 +30,8 @@
         - property名称可以使用保留字，没任何限制，但类型只能是string或者symbol，假如不是这两种类型就类型转换成string
         - property顺序，key是纯数字，怎会按照数字顺序，不然就按照声明顺序
         - Optional chaining '?.'
+            - object?.property/object?.["property"] (假如object为null/undefined，返回undefined，否则相当于object.property/object["property"])
+            - object.method?.() (假如object.method为null/undefined，返回undefined，否则相当于object.method())
     
     - methods
         - this指针
@@ -55,6 +57,7 @@
         - 记住这个：因为“有零引用的对象”总是不可获得的，但是相反却不一定，参考“循环引用”
 
 - Symbol
+    - 
 
 - Collection
 
