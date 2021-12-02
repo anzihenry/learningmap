@@ -45,7 +45,7 @@
         
     
     - object copy
-        - 浅拷贝 bject.assign()
+        - 浅拷贝 Object.assign()
         - 深拷贝
 
     - 垃圾回收机制
@@ -57,7 +57,13 @@
         - 记住这个：因为“有零引用的对象”总是不可获得的，但是相反却不一定，参考“循环引用”
 
 - Symbol
-    - 
+    - 创建一个symbol
+        - let id = Symbol(key)，普通symbol
+        - let id = Symbol.for(key), 全局symbol，有点类似单例的感觉，symbol还没有被创建的话，就创建，后面只返回这个实例， 可以了解下：Symbol.keyFor(symbol)
+        - [System Symbol](https://tc39.es/ecma262/#sec-well-known-symbols)
+    - 不会自动转换成String，都有description，就是key的字符串表达。
+    - 可以用于与其他库区别定义property，就类似于namespace？
+    - Object.keys()和for...in 枚举, 不会把symbol算进去，但是Object.assign(),却会把symbol和property一起复制，详见：“hiding symbolic properties” principle
 
 - Collection
 
@@ -84,6 +90,7 @@
     - null, undefine, NaN --> false
     - "" --> false
     - 其他值均为true
+- 
 
 ### comparison
 - 不同类型值比较 ，
