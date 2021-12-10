@@ -88,6 +88,16 @@
             - array本身实现了的函数基本可以让它成为 stack，queue，deque 这几种常用数据结构
             - 枚举元素时别用for...in，因为这样会把array的所有property都枚举，不单单会枚举元素，而且本身效率也很低
             - length=元素index最大值 + 1，而且可以直接被赋值，因此可以通过改变length，直接清理数组元素，array.length = 0
+            - Don’t compare arrays with ==, 枚举元素来一一对比
+            - methods   array的方法，基本都有thisArg,有些时候非常有用
+                - splice
+                - slice
+                - find(fn)/findIndex(fn)
+                - forEach(fn)
+                - sort(fn)
+
+        - Map、WeakMap
+        - Set、WeakSet
 
 - null
 - undefined
