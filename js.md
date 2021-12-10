@@ -9,16 +9,35 @@
     - 假如是需要计算，就跟骆驼方式
 
 ## data types
+
+### primitive
+- string
+- number
+- bigint
+- boolean
+- symbol
+- null
+- undefined
 ### types
 - Number
     - Integer取值范围：-(2^53-1) ~ 2^53-1
+    - Float
     - BigInt(数字后面加个n)
     - Infinity, -Infinity, NaN
+        - NaN 与任何值都不相等，包括它自己
 - String
     - ''
     - ""
     - `` (可以使用变量名作占位, 类似其他语言的formatted string)
 - Boolean
+- Symbol
+    - 创建一个symbol
+        - let id = Symbol(key)，普通symbol
+        - let id = Symbol.for(key), 全局symbol，有点类似单例的感觉，symbol还没有被创建的话，就创建，后面只返回这个实例， 可以了解下：Symbol.keyFor(symbol)
+        - [System Symbol](https://tc39.es/ecma262/#sec-well-known-symbols)
+    - 不会自动转换成String，都有description，就是key的字符串表达。
+    - 可以用于与其他库区别定义property，就类似于namespace？
+    - Object.keys()和for...in 枚举, 不会把symbol算进去，但是Object.assign(),却会把symbol和property一起复制，详见：“hiding symbolic properties” principle
 - Object
     - properties
         - 增加property，直接声明就算添加了
@@ -55,15 +74,6 @@
             - 增量标记
             - 惰性清理
         - 记住这个：因为“有零引用的对象”总是不可获得的，但是相反却不一定，参考“循环引用”
-
-- Symbol
-    - 创建一个symbol
-        - let id = Symbol(key)，普通symbol
-        - let id = Symbol.for(key), 全局symbol，有点类似单例的感觉，symbol还没有被创建的话，就创建，后面只返回这个实例， 可以了解下：Symbol.keyFor(symbol)
-        - [System Symbol](https://tc39.es/ecma262/#sec-well-known-symbols)
-    - 不会自动转换成String，都有description，就是key的字符串表达。
-    - 可以用于与其他库区别定义property，就类似于namespace？
-    - Object.keys()和for...in 枚举, 不会把symbol算进去，但是Object.assign(),却会把symbol和property一起复制，详见：“hiding symbolic properties” principle
 
 - Collection
 
@@ -109,6 +119,11 @@
             alert( undefined < 0 ); // false (2)
             alert( undefined == 0 ); // false (3)
         - 建议：比较值之前最好确定下是不是为null或者undefined，能避免一些陷阱
+
+- Object.is()
+    - Object.is(NaN, Nan) => true
+    - Object.is(0, -0) => false
+    - 除了上面这两个特例，其实Object.is(a, b)等价于a === b
 
 ## flow control
 ### 逻辑运算符

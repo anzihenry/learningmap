@@ -6,7 +6,10 @@
 ## data types
 ### types
 - Number
-    - integer
+    - int
     - float
+    - complex
 - String
-- Boolean
+- List
+- Tuple
+- Dictionary
