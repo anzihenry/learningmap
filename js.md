@@ -22,13 +22,22 @@
 - Number
     - Integer取值范围：-(2^53-1) ~ 2^53-1
     - Float
-    - BigInt(数字后面加个n)
     - Infinity, -Infinity, NaN
         - NaN 与任何值都不相等，包括它自己
+- BigInt
+    - 数字后面加个n
 - String
-    - ''
-    - ""
-    - `` (可以使用变量名作占位, 类似其他语言的formatted string)
+    - UTF-16编码的字符串
+    - '' 、"" 、`` (可以使用变量名作占位, 类似其他语言的formatted string)
+    - 获取string的某个字符
+        - str.charAt(index), 超出范围的时候返回''
+        - str[index], 超出范围的时候返回undefined
+        - 可以用 for (let char of str)来遍历字符串的每个字符
+    - 获取子串
+        - substr   有可能在某些地方不支持
+        - substring   假如传入的index为负数，会当0处理
+        - slice  就用这个就好！！！
+
 - Boolean
 - Symbol
     - 创建一个symbol
@@ -74,12 +83,14 @@
             - 增量标记
             - 惰性清理
         - 记住这个：因为“有零引用的对象”总是不可获得的，但是相反却不一定，参考“循环引用”
+    - Collection
+        - Array
+            - array本身实现了的函数基本可以让它成为 stack，queue，deque 这几种常用数据结构
+            - 枚举元素时别用for...in，因为这样会把array的所有property都枚举，不单单会枚举元素，而且本身效率也很低
+            - length=元素index最大值 + 1，而且可以直接被赋值，因此可以通过改变length，直接清理数组元素，array.length = 0
 
-- Collection
-
-- 特殊值
-    - null
-    - undefined
+- null
+- undefined
 
 ### typeof operator
 - 注意typeof null
