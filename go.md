@@ -21,10 +21,16 @@
 ### Type Conversion
 - Type(value)显式转换
 
-### Collection
-- array
-- slice
-- map
+### Composite Type
+- pointer
+- struct
+- function
+- container
+    - array
+    - slice
+    - map
+- channel
+- interface
 
 ## Flow Control
 ### if-else
