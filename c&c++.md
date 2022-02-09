@@ -45,6 +45,7 @@
     - 枚举类型
         - enum 无作用域枚举
         - enum class/enum struct 有作用域枚举
+            - 可以指定数据类型
     - 类类型
         - 非联合体类型
         - 联合体类型
@@ -95,6 +96,20 @@
 - Union
 
 ### C++ Standard Library
+
+- Container
+    - array
+    - vector
+    - queue
+    - deque
+    - forward_list
+    - list
+    - set
+    - map
+
+- Algorithm
+
+- Utility
 ### C++ Template
 
 ## C++ 11
