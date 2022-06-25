@@ -8,6 +8,8 @@
 
 ### front end
 - lexical analysis (aka scanner, lexer)
+    - DFAs
+    - regular expressions
 - syntactic analysis (aka parser)
 - semantic analysis (aka type checker, elaboration)
 
